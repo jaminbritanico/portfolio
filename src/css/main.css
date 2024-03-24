@@ -4,17 +4,29 @@
     
     --primary-background-dark: #1e1e1e;
     --primary-background-light: #fffafa;
+
+    --fs-default: 1.75rem;
+    --fs-icon: 2rem;
 }
   
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 12px;
+    font-size: var(--fs-default);
     color: var(--primary-dark);
     background-color: var(--primary-background-light);
 }
 
 .bodyDarkMode {
+    font-size: var(--fs-icon);
     color: var(--primary-light);
     background-color: var(--primary-background-dark);
 }
 
+@media (width < 700px) {
+    :root {
+        --fs-default: 2.75rem;
+        --fs-icon: 3rem;
+    }
+}
