@@ -1,0 +1,19 @@
+:root {
+    --primary-dark: #1e1e1e;
+    --primary-light: #fffafa;
+    
+    --primary-background-dark: #1e1e1e;
+    --primary-background-light: #fffafa;
+}
+  
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--primary-dark);
+    background-color: var(--primary-background-light);
+}
+
+.bodyDarkMode {
+    color: var(--primary-light);
+    background-color: var(--primary-background-dark);
+}
+
