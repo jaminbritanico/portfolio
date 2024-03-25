@@ -6,7 +6,6 @@
     --primary-background-light: #fffafa;
 
     --fs-default: 1.75rem;
-    --fs-icon: 2rem;
 }
   
 body {
@@ -19,7 +18,6 @@ body {
 }
 
 .bodyDarkMode {
-    font-size: var(--fs-icon);
     color: var(--primary-light);
     background-color: var(--primary-background-dark);
 }
