@@ -16,16 +16,16 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar fixed-top navbar-expand-lg">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="navbar-brand z-hover-one" href="#idHome">Portfolio</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">Portfolio</a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active z-hover-one" aria-current="page" href="#idHome">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" aria-current="page" href="#">About</a>
@@ -46,16 +46,23 @@
                     <a class="nav-link disabled" aria-current="page" href="#">Contact</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <i class="bx bxs-moon p-2 z-rotate" id="btnDarkMode"></i>
-            </form>
         </div>
+        <i class="bx bxs-moon p-2 z-rotate" id="btnDarkMode"></i>
     </div>
 </nav>
+<div id="idHome"> 
+    <div id="particles-js">
+        <h1 class="z-home-title">Welcome to my Portfolio</h1>
+    </div> 
+</div>
+<div id="idAbout">
+</div>
 
 <script src="src/js/jquery-3.7.1.min.js"></script>
 <script src="src/js/popper.min.js"></script>
 <script src="src/js/boostrap.min.js"></script>
+<script src="src/js/particles.min.js"></script>
+<script src="src/js/particles.app.js"></script>
 <script src="src/js/main.js"></script>
 
 </body>
