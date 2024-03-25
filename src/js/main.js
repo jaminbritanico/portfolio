@@ -1,21 +1,8 @@
-$(window).on('resize', function() {
-	resize()
-});
-
-function resize() {
-	
-}
-
 $("#btnDarkMode").click(function(){
-	if($("body").hasClass("bodyDarkMode"))
-	{
-		$("body").removeClass("bodyDarkMode");
-		$("#btnDarkMode").removeClass("bxs-sun").addClass("bxs-moon");
-	}
-	else
-	{
-		$("body").addClass("bodyDarkMode");
+	$("body").toggleClass("darkMode");
+	if($("body").hasClass("darkMode"))
 		$("#btnDarkMode").removeClass("bxs-moon").addClass("bxs-sun");
-	}
+	else
+		$("#btnDarkMode").removeClass("bxs-sun").addClass("bxs-moon");
 });
   

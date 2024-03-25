@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>
         Portfolio
     </title>
+
     <link href="src/css/bootstrap.min.css" rel="stylesheet">
-    <link href="src/css/main.css" rel="stylesheet">
     <link href="src/css/boxicons.min.css" rel="stylesheet">
+    <link href="src/css/main.css" rel="stylesheet">
+    <link href="src/css/override.css" rel="stylesheet">
+
 </head>
 <body>
 
-<div class="d-flex overflow-hidden">
-    <div class="flex-grow-1">
-        <h4>Welcome to My Portfolio</h4> 
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <i class="bx bxs-moon p-2 z-rotate" id="btnDarkMode"></i>
+            </form>
+        </div>
     </div>
-    <i class="bx bxs-moon p-2" id="btnDarkMode"></i>
-</div>
+</nav>
 
 <script src="src/js/jquery-3.7.1.min.js"></script>
 <script src="src/js/popper.min.js"></script>
 <script src="src/js/boostrap.min.js"></script>
 <script src="src/js/main.js"></script>
+
 </body>
 </html>

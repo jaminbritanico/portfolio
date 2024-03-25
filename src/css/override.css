@@ -1,0 +1,19 @@
+.navbar-brand, .nav-link, .navbar-nav .nav-link.active {
+    color: var(--z-invert-color);
+}
+
+.nav-link.disabled {
+    color: var(--z-color-disabled);
+}
+
+@media (width > 991px) {
+    .navbar-nav {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+    
+    .navbar-nav > li {
+        display: inline-block;
+    }
+}

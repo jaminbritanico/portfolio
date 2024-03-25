@@ -1,30 +1,37 @@
 :root {
-    --primary-dark: #1e1e1e;
-    --primary-light: #fffafa;
+    --z-color: #FFFAFA;
+    --z-invert-color: #1E1E1E;
+    --z-background-color: #FFFAFA;
+    --z-color-disabled: #D3D3D3;
     
-    --primary-background-dark: #1e1e1e;
-    --primary-background-light: #fffafa;
-
     --fs-default: 1.75rem;
 }
-  
+
+.darkMode {
+    --z-color: #1E1E1E;
+    --z-invert-color: #FFFAFA;
+    --z-background-color: #1E1E1E;
+    --z-color-disabled: #5A5A5A;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
     font-size: var(--fs-default);
-    color: var(--primary-dark);
-    background-color: var(--primary-background-light);
+    color: var(--z-color);
+    background-color: var(--z-background-color);
 }
 
-.bodyDarkMode {
-    color: var(--primary-light);
-    background-color: var(--primary-background-dark);
+i.z-rotate {
+    color: var(--z-invert-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+    transform: rotate3d(0,0,0,0deg);
 }
 
-/* @media (width < 700px) {
-    :root {
-        --fs-default: 2.75rem;
-        --fs-icon: 3rem;
-    }
-} */
+i.z-rotate:hover {
+    transform: rotate3d(0,1,0,360deg);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--z-color-disabled);
+}
