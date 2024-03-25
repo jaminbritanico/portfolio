@@ -24,9 +24,9 @@ body {
     background-color: var(--primary-background-dark);
 }
 
-@media (width < 700px) {
+/* @media (width < 700px) {
     :root {
         --fs-default: 2.75rem;
         --fs-icon: 3rem;
     }
-}
+} */
