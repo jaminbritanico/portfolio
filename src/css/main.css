@@ -38,35 +38,37 @@ body {
 .z-hover-one {
     position:relative;
 }
-.z-hover-one:before {
-    content:' ';
-    position:absolute;
-    top: 10%;
-    left:0;
-    width:100%;
-    height:3px;
-    background-color:  var(--z-invert-color);
-    transform:scaleX(0);
-    transition:all 0.5s;
-    transform-origin:left;
-}
-.z-hover-one:hover {
-    color: var(--z-invert-color);
-}
-.z-hover-one:hover:before, .z-hover-one:hover:after {
-    transform:scaleX(1);
-}
-.z-hover-one:after{
-    content:' ';
-    position:absolute;
-    top:80%;
-    left:0;
-    width:100%;
-    height:3px;
-    background-color: var(--z-invert-color);
-    transform:scaleX(0);
-    transition:all 0.5s;
-    transform-origin:right;
+@media (hover: hover) {
+    .z-hover-one:before {
+        content:' ';
+        position:absolute;
+        top: 10%;
+        left:0;
+        width:100%;
+        height:3px;
+        background-color:  var(--z-invert-color);
+        transform:scaleX(0);
+        transition:all 0.5s;
+        transform-origin:left;
+    }
+    .z-hover-one:hover {
+        color: var(--z-invert-color);
+    }
+    .z-hover-one:hover:before, .z-hover-one:hover:after {
+        transform:scaleX(1);
+    }
+    .z-hover-one:after{
+        content:' ';
+        position:absolute;
+        top:80%;
+        left:0;
+        width:100%;
+        height:3px;
+        background-color: var(--z-invert-color);
+        transform:scaleX(0);
+        transition:all 0.5s;
+        transform-origin:right;
+    }
 }
   
 #idHome {
