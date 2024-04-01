@@ -36,7 +36,10 @@ body {
 }
 
 .z-hover-one {
-    position:relative;
+    position: relative;
+}
+.z-hover-one:hover {
+    color: var(--z-invert-color);
 }
 @media (hover: hover) {
     .z-hover-one:before {
@@ -50,9 +53,6 @@ body {
         transform:scaleX(0);
         transition:all 0.5s;
         transform-origin:left;
-    }
-    .z-hover-one:hover {
-        color: var(--z-invert-color);
     }
     .z-hover-one:hover:before, .z-hover-one:hover:after {
         transform:scaleX(1);
