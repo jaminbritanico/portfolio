@@ -34,5 +34,7 @@
         margin-top: 10px;
         padding: 10px 15px;
         background-color: var(--z-color);
+        border: 1px solid var(--z-invert-color);
+        border-radius: 5px;
     }
 }
