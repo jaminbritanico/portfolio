@@ -88,6 +88,17 @@ body {
     -o-background-size: cover;
     background-size: cover;
     position: relative;
+    position: relative;
+}
+#idAbout:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,var(--z-color),var(--z-invert-color));
+    opacity: 1; 
 }
 
 #particles-js {
@@ -96,9 +107,42 @@ body {
 }
 
 .z-home-title {
-    position:absolute;
+    position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
     color: var(--z-invert-color);
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.tooltip-toggle {
+    position: relative;
+}
+.tooltip-toggle::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: attr(tooltip-label); 
+    padding: 5px;
+    transition: all 0.5s ease;
+    text-wrap: nowrap;
+    background-color: var(--z-color);
+    border: 1px solid var(--z-invert-color);
+    border-radius: 5px;
+}
+.tooltip-toggle::before{
+    color: var(--z-invert-color);
+    font-size: 1rem;
+    opacity: 0;
+    pointer-events: none;
+}
+.tooltip-toggle:focus::before,
+.tooltip-toggle:focus::after,
+.tooltip-toggle:hover::before,
+.tooltip-toggle:hover::after {
+    opacity: 1;
+    transition: all 0.75s ease;
 }
