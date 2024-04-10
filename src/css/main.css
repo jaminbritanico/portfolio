@@ -3,7 +3,10 @@
     --z-invert-color: #1E1E1E;
     --z-background-color: #FFFAFA;
     --z-color-disabled: #D3D3D3;
+    --z-color-red: #F44336;
+    --z-background-color-opacity: rgba(255, 250, 250, 0.8);
     
+    --f-default: 'Courier New', Courier, monospace;
     --fs-default: 1.5rem;
 }
 
@@ -12,12 +15,13 @@
     --z-invert-color: #FFFAFA;
     --z-background-color: #1E1E1E;
     --z-color-disabled: #5A5A5A;
+    --z-background-color-opacity: rgba(30, 30, 30, 0.8);
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--f-default);
     font-size: var(--fs-default);
     color: var(--z-color);
     background-color: var(--z-background-color);
@@ -108,10 +112,15 @@ body {
 
 .z-home-title {
     position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    text-align: center;
+    top: 35%;
+    width: 100%;
     color: var(--z-invert-color);
+    background-color: var(--z-background-color-opacity);
+}
+.z-home-title > p > span
+{
+    color: var(--z-color-red);
 }
 
 .not-allowed {
