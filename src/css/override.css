@@ -1,3 +1,7 @@
+.navbar-transparent {
+    background-color: var(--z-background-color-opacity);
+}
+
 .navbar-brand, .nav-link, .navbar-nav .nav-link.active {
     color: var(--z-invert-color);
 }

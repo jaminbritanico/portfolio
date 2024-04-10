@@ -1,8 +1,7 @@
 $(document).ready(function() {
-
 	$("#btnDarkMode").on("click", darkMode);
+	navbarScrollBar();
 	titleTypeWriter();
-	
 });
   
 function darkMode()
@@ -18,6 +17,19 @@ function darkMode()
 		setParticles("#1E1E1E");
 		$("#btnDarkMode").removeClass("bxs-sun").addClass("bxs-moon");
 	}
+}
+
+function navbarScrollBar()
+{
+	var checkScrollBar = function(){
+		var scroll = $(window).scrollTop();
+		if(scroll >= 1){
+			$('.navbar').addClass("navbar-transparent");
+		} else{
+			$('.navbar').removeClass("navbar-transparent");
+		}
+	}
+	$(window).on('load resize scroll', checkScrollBar);
 }
 
 function titleTypeWriter()
