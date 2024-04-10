@@ -3,7 +3,8 @@
     --z-invert-color: #1E1E1E;
     --z-background-color: #FFFAFA;
     --z-color-disabled: #D3D3D3;
-    --z-color-red: #F44336;
+    --z-color-comment: #5A5A5A;
+    --z-color-red: #E06C75;
     --z-background-color-opacity: rgba(255, 250, 250, 0.8);
     
     --f-default: 'Courier New', Courier, monospace;
@@ -15,6 +16,7 @@
     --z-invert-color: #FFFAFA;
     --z-background-color: #1E1E1E;
     --z-color-disabled: #5A5A5A;
+    --z-color-comment: #D3D3D3;
     --z-background-color-opacity: rgba(30, 30, 30, 0.8);
 }
 
@@ -25,6 +27,10 @@ body {
     font-size: var(--fs-default);
     color: var(--z-color);
     background-color: var(--z-background-color);
+}
+
+.text-highlight {
+    color: var(--z-color-red)
 }
 
 .z-rotate {
@@ -92,7 +98,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     position: relative;
-    position: relative;
 }
 #idAbout:before {
     content: '';
@@ -155,3 +160,104 @@ body {
     opacity: 1;
     transition: all 0.75s ease;
 }
+
+.code-editor {
+    position: relative;
+    top: 15%;
+    left: 10%;
+    width: 40%;
+    color: var(--z-invert-color);
+    background-color: var(--z-background-color);
+    border-radius: 5px;
+    box-shadow: 0 10px 6px -6px #000;
+    border: 1px solid var(--z-invert-color);
+    
+    .title {
+        color: var(--z-color-red);
+    }
+    
+    > .tabs {
+      background-color: transparent;
+    }
+  
+    > .tabs > .title {
+      width: 60%;
+      position: relative;
+      padding: 5px 0 7px 5px;
+      text-align: center;
+      font-size: 1.2rem;
+      word-wrap: break-word;
+    
+      &.-ruby { color: #D16262; }
+      &.-html { color: #E27B60; }
+      &.-react { color: #75E0FD; }
+  
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        content: '';
+        color: #6E7180;
+        width: 66.8%;
+        padding-top: 5px;
+        height: 100%;
+        background-color: var(--z-color-comment);
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid var(--z-invert-color);
+        border-left: 1px solid var(--z-invert-color);
+      }
+    }
+  
+    > .content {
+      padding: 20px 0 20px 10px;
+      font-size: 1rem;
+    }
+  
+    > .content > .lines {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .lines > .line ::selection {
+      background-color: var(--z-invert-color);
+    }
+  
+    .lines > .line {
+      white-space: nowrap;
+    }
+    
+    .lines > .line > span {
+      white-space: normal;
+      word-wrap: break-word;
+    }
+  
+    .lines .linenumber {
+      color: var(--z-color-comment);
+      padding: 0 15px 0 0;
+      font-weight: normal;
+    }
+  
+    .red        { color: #e06c75; }
+    .purple     { color: #c678dd; }
+    .yellow     { color: #FECF5F; }
+    .orange     { color: #FB8578; }
+    .blue       { color: #7EBAFF; }
+    .green      { color: #98c379; }
+    .light-blue { color: #75E0FD }
+    .comment    { color: var(--z-color-comment); }
+  }
+  
+@media only screen and (max-width : 480px) {
+    .code-editor {
+        width: 80%;
+      > .tabs > .title {
+        width: 100%;
+        border-right: none;
+        
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
