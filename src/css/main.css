@@ -38,7 +38,7 @@ body {
 }
 
 .z-icon-color{
-  filter: var(--z-icon-invert-color);
+    filter: var(--z-icon-invert-color);
 }
 
 .z-rotate {
@@ -127,6 +127,36 @@ body {
     position: relative;
     background-color: var(--z-color-disabled);
 }
+#idExperience {
+    height:100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-color: var(--z-color-disabled);
+}
+#idProject {
+    height:100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-color: var(--z-color-disabled);
+}
+#idEducation {
+    height:100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-color: var(--z-color-disabled);
+}
 
 #particles-js {
     width: 100%;
@@ -187,9 +217,11 @@ body {
 
 .code-editor {
     position: relative;
+    /* top: 15%;
+    left: 50%; */
     top: 15%;
-    left: 50%;
     width: 40%;
+    margin: 0 auto;
     color: var(--z-invert-color);
     background-color: var(--z-background-color);
     border-radius: 5px;
@@ -273,15 +305,36 @@ body {
   }
   
 @media only screen and (max-width : 480px) {
-    .code-editor {
-        width: 80%;
-      > .tabs > .title {
-        width: 100%;
-        border-right: none;
-        
-        &:after {
-          display: none;
-        }
+  .code-editor {
+      width: 80%;
+    > .tabs > .title {
+      width: 100%;
+      border-right: none;
+      
+      &:after {
+        display: none;
       }
     }
   }
+}
+
+.div-container{
+  position: relative;
+  color: var(--z-color);
+  top: 15%;
+  margin: 0 auto;
+  padding: 20px;
+  height: 80%;
+  width: 95%;
+  overflow-y: auto;
+  background-color: var(--z-invert-color);
+}
+
+@media only screen and (max-width: 991px) {
+  .div-container{
+    font-size: .7rem;
+    top: 10%;
+    padding: 20px 5px 5px 5px;
+    width: 90%;
+  }
+}
