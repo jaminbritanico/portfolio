@@ -209,6 +209,49 @@ body {
     transition: all 0.75s ease;
 }
 
+.arrowdown {
+	position: relative;
+  display: block;
+	width: 60px;
+	height: 72px;
+  top: 85%;
+	margin: 0 auto;
+}
+.arrowdown path {
+	stroke: var(--z-color-red);
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: kfarrowdown 2s infinite;
+	-webkit-animation: kfarrowdown 2s infinite; 
+}
+
+@keyframes kfarrowdown
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+@-webkit-keyframes kfarrowdown /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+.arrowdown path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+.arrowdown path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+.arrowdown path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
 .developer{
   position: absolute;
   top: 15%;
@@ -330,11 +373,4 @@ body {
   background-color: var(--z-invert-color);
 }
 
-@media only screen and (max-width: 991px) {
-  .div-container{
-    font-size: .7rem;
-    top: 10%;
-    padding: 20px 5px 5px 5px;
-    width: 90%;
-  }
-}
+
