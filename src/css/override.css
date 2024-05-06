@@ -28,10 +28,14 @@
 }
 @media only screen and (max-width: 991px) {
     .navbar-brand {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .navbar-toggler {
+        filter: var(--z-icon-invert-color);
     }
     
     .navbar-collapse {
