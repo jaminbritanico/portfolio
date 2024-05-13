@@ -10,6 +10,14 @@
     --f-default: 'Courier New', Courier, monospace;
     --fs-default: 1.5rem;
 
+    --code-editor-border: #D3D3D3;
+    --code-editor-header: #D3D3D3;
+    --code-editor-content: #FFFAFA;
+    --code-editor-linenumber: #D3D3D3;
+    --code-editor-syntax-blue: #224de9;
+    --code-editor-syntax-red: #E06C75;
+    --code-editor-highlights: #5ff661;
+    
     --z-icon-invert-color: brightness(0) saturate(100%) invert(8%) sepia(90%) saturate(10%) hue-rotate(314deg) brightness(94%) contrast(92%);
 }
 
@@ -20,6 +28,14 @@
     --z-color-disabled: #5A5A5A;
     --z-color-comment: #D3D3D3;
     --z-background-color-opacity: rgba(30, 30, 30, 0.8);
+
+    --code-editor-border: #1E1E1E;
+    --code-editor-header: #1E1E1E;
+    --code-editor-content: #5A5A5A;
+    --code-editor-linenumber: #D3D3D3;
+    --code-editor-syntax-blue: #728ef4;
+    --code-editor-syntax-red: #fd6875;
+    --code-editor-highlights: #5ff661;
 
     --z-icon-invert-color: brightness(0) saturate(100%) invert(84%) sepia(1%) saturate(1296%) hue-rotate(315deg) brightness(102%) contrast(137%);
 }
@@ -266,6 +282,85 @@ body {
   background-color: var(--z-invert-color);
   border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
 }
+
+.editor {
+  position: relative;
+  top: 15%;
+  left: 40%;
+  font-size: 1rem;
+  width: 55%;
+  background: var(--code-editor-content);
+  border: 1px solid var(--code-editor-border);
+  border-radius: 5px;
+}
+
+.editor .editor-header {
+  background-color: var(--code-editor-header);
+  border-radius: 5px 0px 0px 0px;
+  height: 35px;
+}
+
+.editor .editor-tab-one {
+  color: var(--z-invert-color);
+  text-align: center;
+  padding-top: 8px;
+  width: 20%;
+  height: 100%;
+  border-radius: 5px 0px 0px 0px;
+  background-color: var(--code-editor-content);
+}
+
+.syntax-blue {
+  color: var(--code-editor-syntax-blue);
+}
+
+.syntax-red {
+  color: var(--code-editor-syntax-red);
+}
+
+.syntax-highlights {
+  color: var(--code-editor-highlights);
+}
+
+.editor .buttons {
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(45,55,65); 
+  padding: 10px;
+}
+
+.editor .button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.editor .editor-content {
+  padding: 15px;
+}
+
+.editor .editor-content .editor-line {
+  display: block;
+  margin: 5px;
+  color: var(--code-editor-linenumber);
+  counter-increment: line;
+}
+
+.editor .editor-content .editor-line .element {
+  color: var(--z-invert-color);
+  margin-left: 35px;
+}
+
+.editor .editor-content .editor-line::before {
+  position: absolute;
+  content: counter(line);
+}
+
+.editor .editor-content .editor-line span.tab {
+  margin-right: 20px;
+}
+
+
 
 .code-editor {
     position: relative;
