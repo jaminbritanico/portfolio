@@ -1,8 +1,37 @@
 @media only screen and (max-width: 991px) {
+    
+    #idAbout {
+        height: 120vh;
+    }
     .divdeveloper{
+        top: 8%;
         width: 90%;
         height: 50%;
     }
+
+    .editor {
+      top: 47%;
+      left: 5%;
+      width: 90%;
+    }
+    .editor .editor-tab-one {
+      width: 50%;
+    }
+    .editor .editor-content {
+      overflow: auto;
+      text-wrap: nowrap;
+      height: 50vh;
+    }
+    .editor .editor-content .editor-line {
+      width: 100%;
+    }
+    .editor .editor-content .editor-line .element {
+      margin-left: 15px;
+    }
+    .editor .editor-content .editor-line::before {
+      position: unset;
+    }
+
     .div-container{
       font-size: .7rem;
       top: 10%;
