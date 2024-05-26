@@ -322,6 +322,10 @@ body {
   color: var(--code-editor-highlights);
 }
 
+.syntax-comment {
+  color: var(--code-editor-linenumber);
+}
+
 .editor .buttons {
   box-sizing: border-box;
   border-bottom: 1px solid rgb(45,55,65); 
