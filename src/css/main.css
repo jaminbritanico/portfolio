@@ -282,6 +282,26 @@ body {
   background-color: var(--z-invert-color);
   border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
 }
+.btn-fill {
+  color: var(--z-invert-color);
+  transition: 0.25s;
+  background: none;
+  border: 1px solid var(--z-invert-color);
+  margin-top: 35px;
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus { 
+    border-color: var(--z-invert-color);
+    color: var(--z-color);
+  }
+}
+
+.btn-fill:hover,
+.btn-fill:focus {
+  box-shadow: inset 0 0 0 2em var(--z-invert-color);
+}
 
 .editor {
   position: relative;
